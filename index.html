@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint</title>
+
+    <!----Font awesome-->
+    <script src="https://kit.fontawesome.com/3b4b146db6.js" crossorigin="anonymous"></script>
+
+    <!---Css-->
+    <link rel="stylesheet" href="styles.css">
+
+    <!----Font Style-->
+    <!----Playfair display-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+    <!---Fira Sans--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <!----Header----->
+    <header>
+        
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+
+        <a href="index.html" class="logo">Carbon Footprint</a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About C/F</a>
+        </nav>
+
+        <div class="icons">
+            <a href="index.html" class="btn">Take The Quiz</a>
+        </div>
+    </header>
+
+
+    <!-----Home----->
+    <div class="hero-content">
+        <h2>You Care for your nature, we know the science, Let's work together,</h2>
+        <p> Count your footprints ; Carbon ones</p>
+        <div class="cta-container" >
+            <button class="btn" onclick="start(1)">Take the quiz</button>
+        </div>
+
+        <span class="share">
+            <a href="#" class="heroCta">Share with Friends</a>
+        </span>
+    </div>
+    
+    <!------Home Ends----->
+
+
+    <!----Page 1-->
+    <div class="qna-container">
+        <h2>What Transportation Do You Usually Take?</h2>
+        <div class="a-container">
+           <button class="response-btn" onclick="choose(1,'Bus')">
+            <p class="title" >Bus</p>
+           </button> 
+
+           <button class="response-btn" onclick="choose(1,'Car')">
+            <p class="title" >Car</p>
+           </button> 
+
+           <button class="response-btn" onclick="choose(1,'Bike')">
+            <p class="title" >Bike</p>
+           </button> 
+
+           <button class="response-btn" onclick="choose(1,'Walk')">
+            <p class="title" >Walk</p>
+           </button> 
+
+           <button class="response-btn" onclick="choose(1,'Metro')">
+            <p class="title" >Metro</p>
+           </button> 
+        </div>
+    </div>
+
+    <!----Page-2----->
+    <div class="qna-container">
+        <h2>How Many Times Do You Buy Local Products?</h2>
+        <div class="a-container">
+           <button class="response-btn" onclick="choose(2,'Always')">
+            <p class="title" >Always</p>
+           </button> 
+
+           <button class="response-btn" onclick="choose(2,'Sometimes')">
+            <p class="title" >Sometimes</p>
+           </button> 
+
+           <button class="response-btn" onclick="choose(2,'Never')">
+            <p class="title" >Never</p>
+           </button> 
+        </div>
+    </div>
+
+    <!----Page-3----->
+    <div class="qna-container">
+        <h2>Do you often use Air Conditioner or Heater?</h2>
+        <div class="a-container">
+           <button class="response-btn" onclick="choose(3,'Yes')">
+            <p class="title" >Yes</p>
+           </button> 
+
+           <button class="response-btn" onclick="choose(3,'No')">
+            <p class="title" >No</p>
+           </button> 
+        </div>
+    </div>
+
+    <!---Page-4----->
+    <div class="qna-container">
+        <h2>How Many Times Do You Eat Outside Everyday?</h2>
+        <div class="a-container">
+           <button class="response-btn" onclick="choose(4,'One')">
+            <p class="title" >One</p>
+           </button> 
+
+           <button class="response-btn" onclick="choose(4,'Two')">
+            <p class="title" >Two</p>
+           </button> 
+
+           <button class="response-btn" onclick="choose(4,'Thrice Or More')">
+            <p class="title" >Thrice Or More</p>
+           </button> 
+        </div>
+    </div>
+
+    <!----Page-5------>
+    <div class="qna-container">
+        <h2>Which One do you recycle?</h2>
+        <div class="a-container">
+           <button class="response-btn" onclick="choose(5,'Food')">
+            <p class="title" >Food</p>
+           </button> 
+
+           <button class="response-btn" onclick="choose(5,'Paper')">
+            <p class="title" >Paper</p>
+           </button> 
+
+           <button class="response-btn" onclick="choose(5,'Tin Cans')">
+            <p class="title" >Tin Cans</p>
+           </button> 
+
+           <button class="response-btn" onclick="choose(5,'Plastic')">
+            <p class="title" >Plastic</p>
+           </button> 
+
+           <button class="response-btn" onclick="choose(5,'Glass')">
+            <p class="title" >Glass</p>
+           </button> 
+
+           <button class="response-btn" onclick="choose(5,'None')">
+            <p class="title" >None</p>
+           </button> 
+        </div>
+
+        <button class="submit-btn" onclick="submit()">Calculate</button>
+    </div>
+
+    <!----Page-6-->
+    <div class="qna-container">
+        <h2>Your Results : </h2>
+        <div class="outcome">
+            <div class="save">
+                <p>
+                    <span id="behave"></span>
+                    <span id="total"></span>
+                    Trees A Year!!</p>
+            </div>
+            
+            <div class="data">
+                <br><p>You Generated
+                    <span id="AllScore"></span>
+                    Kg Of Co2 Per Year, 
+                    <br><br><span id="diffavg"></span>
+                    <span class="beh"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+
+    <!--copyright section-->
+    <div class="copyright">
+        <p>&copy; 2022 Anindita Priyadarshini.</p>
+    </div>
+
+    <!---SCript JS-->
+    <script src="script.js"></script>
+</body>
+</html>
